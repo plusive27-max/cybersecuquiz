@@ -117,6 +117,7 @@ header h1 {
     cursor: pointer;
     transition: all 0.2s;
     margin: 10px;
+    display: inline-block;
 }
 
 .btn-primary {
@@ -218,6 +219,7 @@ header h1 {
     transition: all 0.2s;
     font-size: 1rem;
     color: var(--text);
+    width: 100%;
 }
 
 .option-btn:hover:not(:disabled) {
@@ -270,7 +272,7 @@ header h1 {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Results Screen */
@@ -324,17 +326,26 @@ header h1 {
     border-bottom: none;
 }
 
-.recommendation-list li {
+#recommendation-list {
+    list-style: none;
+    padding: 0;
+}
+
+#recommendation-list li {
     margin: 10px 0;
     padding-left: 20px;
     position: relative;
 }
 
-.recommendation-list li:before {
+#recommendation-list li:before {
     content: "→";
     position: absolute;
     left: 0;
     color: var(--primary);
+}
+
+.action-buttons {
+    margin: 30px 0;
 }
 
 .share-section {
@@ -344,15 +355,18 @@ header h1 {
 }
 
 .qr-box {
-    width: 200px;
-    height: 200px;
+    width: 220px;
     margin: 20px auto;
+    padding: 20px;
     background: var(--bg);
     border: 2px dashed var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 8px;
+    text-align: center;
+}
+
+.qr-box img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Review Screen */
@@ -361,6 +375,8 @@ header h1 {
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .review-item {
@@ -368,6 +384,7 @@ header h1 {
     margin-bottom: 15px;
     border-radius: 8px;
     border-left: 4px solid;
+    text-align: left;
 }
 
 .review-item.correct {
@@ -382,6 +399,12 @@ header h1 {
 
 .review-item h4 {
     margin-bottom: 10px;
+    color: var(--text);
+}
+
+.review-item p {
+    margin: 8px 0;
+    color: var(--text-light);
 }
 
 /* Footer */
@@ -412,5 +435,10 @@ footer {
         width: 120px;
         height: 120px;
         font-size: 2rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        margin: 5px 0;
     }
 }
