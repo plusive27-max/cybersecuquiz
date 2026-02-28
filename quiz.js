@@ -1,5 +1,5 @@
 // CyberSecuQuiz - Main Application Logic
-// Handles quiz flow, scoring, localStorage, and results
+// Handles quiz flow, scoring, localStorage, results, and QR code generation
 
 class CyberSecuQuiz {
     constructor() {
@@ -237,7 +237,7 @@ class CyberSecuQuiz {
         // Recommendations
         this.generateRecommendations();
         
-        // Generate QR code placeholder (you can integrate a real QR library here)
+        // Generate QR code with results
         this.generateResultQR(percentage);
     }
 
@@ -271,21 +271,50 @@ class CyberSecuQuiz {
     }
 
     generateResultQR(percentage) {
-    const qrBox = document.getElementById('qr-placeholder');
-    qrBox.innerHTML = ''; // Clear placeholder
-    
-    // Generate QR with current score
-    const shareText = `I scored ${percentage}% on CyberSecuQuiz!`;
-    
-    new QRCode(qrBox, {
-        text: shareText,
-        width: 180,
-        height: 180,
-        colorDark: "#2563eb",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.M
-    });
-}
+        const qrBox = document.getElementById('qr-placeholder');
+        qrBox.innerHTML = ''; // Clear placeholder
+        
+        // Create text to encode in QR
+        const shareText = `I scored ${percentage}% on CyberSecuQuiz! Test your skills:`;
+        const appUrl = window.location.href; // Gets current page URL
+        
+        // Combine text + URL
+        const qrContent = `${shareText} ${appUrl}`;
+        
+        // Generate QR code
+        new QRCode(qrBox, {
+            text: qrContent,
+            width: 180,
+            height: 180,
+            colorDark: "#2563eb",  // Matches your blue theme
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+        
+        // Add download button for sharing
+        const downloadBtn = document.createElement('button');
+        downloadBtn.className = 'btn-secondary';
+        downloadBtn.style.marginTop = '15px';
+        downloadBtn.textContent = 'Download My Result';
+        downloadBtn.onclick = () => this.downloadResult(percentage);
+        qrBox.appendChild(downloadBtn);
+    }
+
+    downloadResult(percentage) {
+        const resultData = {
+            quiz: 'CyberSecuQuiz',
+            score: percentage + '%',
+            date: new Date().toLocaleDateString(),
+            categories: this.categoryScores
+        };
+        
+        // Create text file
+        const blob = new Blob([JSON.stringify(resultData, null, 2)], {type: 'application/json'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `cybersecuquiz-result-${Date.now()}.txt`;
+        a.click();
     }
 
     showReview() {
