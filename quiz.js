@@ -271,18 +271,21 @@ class CyberSecuQuiz {
     }
 
     generateResultQR(percentage) {
-        // Placeholder for QR code generation
-        // In a real implementation, you'd use a library like qrcode.js
-        const qrBox = document.getElementById('qr-placeholder');
-        qrBox.innerHTML = `
-            <div style="text-align: center;">
-                <div style="font-size: 3rem; margin-bottom: 10px;">📱</div>
-                <p>Score: ${percentage}%</p>
-                <p style="font-size: 0.9rem; color: var(--text-light);">
-                    (QR code integration: Use qrcode.js library for production)
-                </p>
-            </div>
-        `;
+    const qrBox = document.getElementById('qr-placeholder');
+    qrBox.innerHTML = ''; // Clear placeholder
+    
+    // Generate QR with current score
+    const shareText = `I scored ${percentage}% on CyberSecuQuiz!`;
+    
+    new QRCode(qrBox, {
+        text: shareText,
+        width: 180,
+        height: 180,
+        colorDark: "#2563eb",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.M
+    });
+}
     }
 
     showReview() {
