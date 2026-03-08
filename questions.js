@@ -15,7 +15,7 @@ const quizData = [
             "Forward the text to your family to warn them"
         ],
         correct: 1,
-        feedback: "Correct! Urgency is a classic social engineering tactic. Always contact your bank using official channels (card, statement, or verified website), never through unsolicited links. The domain 'bank-secure-verify.com' is not your actual bank's domain."
+        feedback: "Urgency is a classic social engineering tactic. Always contact your bank using official channels (card, statement, or verified website), never through unsolicited links. The domain 'bank-secure-verify.com' is not your actual bank's domain."
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const quizData = [
             "Forward to HR but don't disturb the CEO"
         ],
         correct: 2,
-        feedback: "Correct! This is a 'CEO fraud' or business email compromise (BEC) attack. The email address is slightly wrong. Always verify unusual requests through separate, known channels — never reply to the suspicious email."
+        feedback: "This is a 'CEO fraud' or business email compromise (BEC) attack. The email address is slightly wrong. Always verify unusual requests through separate, known channels — never reply to the suspicious email."
     },
     {
         id: 3,
@@ -43,7 +43,7 @@ const quizData = [
             "Share on social media to warn others"
         ],
         correct: 1,
-        feedback: "Correct! Unexpected prizes are almost always scams. The domain is fake (not tesco.com), and clicking could install malware or steal data. Delete, block, and never engage. Legitimate competitions you didn't enter don't exist."
+        feedback: "Unexpected prizes are almost always scams. The domain is fake (not tesco.com), and clicking could install malware or steal data. Delete, block, and never engage. Legitimate competitions you didn't enter don't exist."
     },
     {
         id: 4,
@@ -57,7 +57,7 @@ const quizData = [
             "Urgently means I should open it now"
         ],
         correct: 1,
-        feedback: "Correct! Malware often hides as fake double extensions. '.pdf.exe' is actually a program that will run when clicked. Real PDFs end in .pdf only. Never open unexpected executables, even from seemingly familiar senders."
+        feedback: "Malware often hides as fake double extensions. '.pdf.exe' is actually a program that will run when clicked. Real PDFs end in .pdf only. Never open unexpected executables, even from seemingly familiar senders."
     },
     {
         id: 5,
@@ -71,7 +71,7 @@ const quizData = [
             "Take a photo of the QR to scan later at home"
         ],
         correct: 1,
-        feedback: "Correct! 'Quishing' (QR phishing) is rising. Stickers can be placed over legitimate codes. Paper menus are safer. If using QR codes, ask staff to confirm they're official. Never scan random codes in public spaces."
+        feedback: "'Quishing' (QR phishing) is rising. Stickers can be placed over legitimate codes. Paper menus are safer. If using QR codes, ask staff to confirm they're official. Never scan random codes in public spaces."
     },
 
     // CATEGORY 2: Password Security (Questions 6-10)
@@ -87,7 +87,7 @@ const quizData = [
             "Use the same strong password you use for your email"
         ],
         correct: 2,
-        feedback: "Correct! Long passphrases beat complex short passwords. 'Correct-Horse-Battery-Staple' is memorable and has high entropy. Random short passwords are hard to remember (so people write them down). Never reuse passwords across accounts."
+        feedback: "Long passphrases beat complex short passwords. 'Correct-Horse-Battery-Staple' is memorable and has high entropy. Random short passwords are hard to remember (so people write them down). Never reuse passwords across accounts."
     },
     {
         id: 7,
@@ -101,7 +101,7 @@ const quizData = [
             "Write your master password down and hide it"
         ],
         correct: 1,
-        feedback: "Correct! Reputable password managers use AES-256 encryption. Your passwords are encrypted locally before syncing. One strong master password + unique per-site passwords is vastly safer than reused or weak memorized passwords."
+        feedback: "Reputable password managers use AES-256 encryption. Your passwords are encrypted locally before syncing. One strong master password + unique per-site passwords is vastly safer than reused or weak memorized passwords."
     },
     {
         id: 8,
@@ -115,7 +115,7 @@ const quizData = [
             "Add \"2024\" to the end and reuse it"
         ],
         correct: 1,
-        feedback: "Correct! Credential stuffing attacks try leaked passwords across multiple sites. If 'ShoppingSite2023!' is exposed, attackers will try it on banking, email, and social media. Use unique passwords everywhere — password managers make this practical."
+        feedback: "Credential stuffing attacks try leaked passwords across multiple sites. If 'ShoppingSite2023!' is exposed, attackers will try it on banking, email, and social media. Use unique passwords everywhere — password managers make this practical."
     },
     {
         id: 9,
@@ -129,7 +129,7 @@ const quizData = [
             "Ask the barista if the Wi-Fi is \"the secure one\""
         ],
         correct: 1,
-        feedback: "Correct! Shared Wi-Fi passwords mean anyone can join and potentially intercept traffic. Mobile data is encrypted and safer for banking. If you must use public Wi-Fi, use a VPN. Never access financial accounts on unsecured networks."
+        feedback: "Shared Wi-Fi passwords mean anyone can join and potentially intercept traffic. Mobile data is encrypted and safer for banking. If you must use public Wi-Fi, use a VPN. Never access financial accounts on unsecured networks."
     },
     {
         id: 10,
@@ -143,7 +143,7 @@ const quizData = [
             "Give them a fake code to test if they're legitimate"
         ],
         correct: 1,
-        feedback: "Correct! This is a real-time 2FA interception attack. The caller triggered the login that sent you the code. Never share 2FA codes with anyone — legitimate companies never ask for them. Hang up and change your password if you shared any information."
+        feedback: "This is a real-time 2FA interception attack. The caller triggered the login that sent you the code. Never share 2FA codes with anyone — legitimate companies never ask for them. Hang up and change your password if you shared any information."
     },
 
     // CATEGORY 3: Social Engineering (Questions 11-15)
@@ -159,7 +159,7 @@ const quizData = [
             "Give a fake password to see what happens"
         ],
         correct: 1,
-        feedback: "Correct! Vishing (voice phishing) exploits authority and helpfulness. Real IT never asks for passwords — they have administrative tools. Always verify through official channels: hang up, call the IT number you have on file, or walk to the IT office."
+        feedback: "Vishing (voice phishing) exploits authority and helpfulness. Real IT never asks for passwords — they have administrative tools. Always verify through official channels: hang up, call the IT number you have on file, or walk to the IT office."
     },
     {
         id: 12,
@@ -173,7 +173,7 @@ const quizData = [
             "Ask which CEO they're meeting while holding the door"
         ],
         correct: 2,
-        feedback: "Correct! 'Tailgating' or 'piggybacking' is a physical social engineering attack. Attackers dress professionally to blend in. Never bypass security procedures — direct all visitors to official check-in. Security can verify their appointment quickly."
+        feedback: "'Tailgating' or 'piggybacking' is a physical social engineering attack. Attackers dress professionally to blend in. Never bypass security procedures — direct all visitors to official check-in. Security can verify their appointment quickly."
     },
     {
         id: 13,
@@ -187,7 +187,7 @@ const quizData = [
             "Ask colleagues if anyone lost a USB drive"
         ],
         correct: 2,
-        feedback: "Correct! 'USB drop attacks' are common — drives contain malware that auto-runs when plugged in. Never insert unknown USB devices. Even 'checking first' on a personal device can infect that device and spread later. Always hand found media to security professionals."
+        feedback: "'USB drop attacks' are common — drives contain malware that auto-runs when plugged in. Never insert unknown USB devices. Even 'checking first' on a personal device can infect that device and spread later. Always hand found media to security professionals."
     },
     {
         id: 14,
@@ -201,7 +201,7 @@ const quizData = [
             "Give her your email but not phone number"
         ],
         correct: 1,
-        feedback: "Correct! Fake recruiter profiles are common. Attackers build convincing profiles, then move to encrypted platforms to avoid detection. Verify all recruiters through official company channels. Never share personal contact info with unverified social media contacts."
+        feedback: "Fake recruiter profiles are common. Attackers build convincing profiles, then move to encrypted platforms to avoid detection. Verify all recruiters through official company channels. Never share personal contact info with unverified social media contacts."
     },
     {
         id: 15,
@@ -215,7 +215,7 @@ const quizData = [
             "Confront them and ask why they're watching"
         ],
         correct: 2,
-        feedback: "Correct! 'Shoulder surfing' captures passwords, account numbers, and sensitive data. In public spaces, use privacy screens, work with your back to walls, or avoid sensitive tasks entirely. Finishing quickly and leaving is safer than confrontation or ignoring the risk."
+        feedback: "'Shoulder surfing' captures passwords, account numbers, and sensitive data. In public spaces, use privacy screens, work with your back to walls, or avoid sensitive tasks entirely. Finishing quickly and leaving is safer than confrontation or ignoring the risk."
     },
 
     // CATEGORY 4: Malware & Safe Browsing (Questions 16-20)
@@ -231,7 +231,7 @@ const quizData = [
             "Ignore it — Flash Player isn't important"
         ],
         correct: 1,
-        feedback: "Correct! Fake update pop-ups are common malware vectors. Never download software from browser pop-ups. Always go directly to the vendor's official website or use your operating system's built-in update mechanism. (Note: Flash is actually discontinued — another red flag!)"
+        feedback: "Fake update pop-ups are common malware vectors. Never download software from browser pop-ups. Always go directly to the vendor's official website or use your operating system's built-in update mechanism. (Note: Flash is actually discontinued — another red flag!)"
     },
     {
         id: 17,
@@ -245,7 +245,7 @@ const quizData = [
             "Download on an old computer first to test"
         ],
         correct: 1,
-        feedback: "Correct! Any software asking you to disable security is almost certainly malware. 'False positive' claims exploit technical trust. Use established, reputable software from official sources. Free tools from unknown sites often contain trojans, keyloggers, or ransomware."
+        feedback: "Any software asking you to disable security is almost certainly malware. 'False positive' claims exploit technical trust. Use established, reputable software from official sources. Free tools from unknown sites often contain trojans, keyloggers, or ransomware."
     },
     {
         id: 18,
@@ -259,7 +259,7 @@ const quizData = [
             "Check if there's a paid version (paid = more trustworthy)"
         ],
         correct: 1,
-        feedback: "Correct! Malicious extensions often have fake reviews and high download counts. Check the publisher's website, search '[extension name] malware/scam,' and review permissions (an ad blocker needing camera access is suspicious). When in doubt, don't install."
+        feedback: "Malicious extensions often have fake reviews and high download counts. Check the publisher's website, search '[extension name] malware/scam,' and review permissions (an ad blocker needing camera access is suspicious). When in doubt, don't install."
     },
     {
         id: 19,
@@ -273,7 +273,7 @@ const quizData = [
             "Follow on-screen instructions carefully to ensure payment goes through"
         ],
         correct: 1,
-        feedback: "Correct! This is a ransomware attack. Never pay — payment doesn't guarantee decryption and funds criminals. Disconnect from networks immediately (unplug ethernet/turn off Wi-Fi), power down, and seek professional incident response. Report to Action Fraud (UK) or FBI IC3 (US)."
+        feedback: "This is a ransomware attack. Never pay — payment doesn't guarantee decryption and funds criminals. Disconnect from networks immediately (unplug ethernet/turn off Wi-Fi), power down, and seek professional incident response. Report to Action Fraud (UK) or FBI IC3 (US)."
     },
     {
         id: 20,
@@ -287,6 +287,7 @@ const quizData = [
             "Manual backup — should be automated"
         ],
         correct: 0,
-        feedback: "Correct! The 3-2-1 backup rule protects against this: 3 total copies, 2 different types (e.g., external drive + cloud), 1 offsite/cloud. Multiple copies on the same failing drive aren't true backups. Test restores periodically — backups you can't restore are useless."
+        feedback: "The 3-2-1 backup rule protects against this: 3 total copies, 2 different types (e.g., external drive + cloud), 1 offsite/cloud. Multiple copies on the same failing drive aren't true backups. Test restores periodically — backups you can't restore are useless."
     }
+
 ];
